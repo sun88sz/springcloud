@@ -1,0 +1,21 @@
+server:
+  port: 13006
+spring:
+  application:
+    name: enreka-consumer-feign-hystrix-stream
+  kafka:
+    bootstrap-servers: localhost:9092
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000

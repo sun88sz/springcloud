@@ -19,6 +19,9 @@
         <module>zipkin_server_stream</module>
         <module>eureka_consumer_sleuth_stream</module>
         <module>eureka_client_sleuth_stream</module>
+        <module>eureka_hystrix_turbine</module>
+        <module>eureka_hystrix_dashboard</module>
+        <module>eureka_hystrix_turbine_stream</module>
     </modules>
     <packaging>pom</packaging>
 
