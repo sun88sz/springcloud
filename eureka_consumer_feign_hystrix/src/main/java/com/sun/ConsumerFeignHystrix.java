@@ -6,19 +6,17 @@ import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
-@EnableHystrixDashboard
-@SpringCloudApplication
+//@SpringCloudApplication
 @EnableFeignClients
-//@EnableCircuitBreaker
-//@EnableDiscoveryClient
-//@SpringBootApplication
-public class ApplicationConsumerFeignHystrix {
+@EnableCircuitBreaker
+@EnableDiscoveryClient
+@SpringBootApplication
+public class ConsumerFeignHystrix {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ApplicationConsumerFeignHystrix.class).web(true).run(args);
+        new SpringApplicationBuilder(ConsumerFeignHystrix.class).web(true).run(args);
 
-        System.out.println("ApplicationConsumerFeignHystrix completed");
+        System.out.println("ConsumerFeignHystrix completed");
     }
 }
