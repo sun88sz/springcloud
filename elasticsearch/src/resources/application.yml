@@ -1,8 +1,8 @@
+server:
+  port: 8080
 spring:
-    data:
-        elasticsearch:
-            cluster-name: es
-            cluster-nodes: localhost:9300
-            local: true
-            repositories:
-                enable: true
+  data:
+    elasticsearch:
+      cluster-name: es
+      cluster-nodes: localhost:9300
+debug: true
