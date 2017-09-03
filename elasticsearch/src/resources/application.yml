@@ -1,0 +1,8 @@
+spring:
+    data:
+        elasticsearch:
+            cluster-name: es
+            cluster-nodes: localhost:9300
+            local: true
+            repositories:
+                enable: true

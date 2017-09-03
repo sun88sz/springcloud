@@ -22,6 +22,7 @@
         <module>eureka_hystrix_turbine</module>
         <module>eureka_hystrix_dashboard</module>
         <module>eureka_hystrix_turbine_stream</module>
+        <module>elasticsearch</module>
     </modules>
     <packaging>pom</packaging>
 
