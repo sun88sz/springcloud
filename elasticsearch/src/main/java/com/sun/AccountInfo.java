@@ -11,9 +11,9 @@ public class AccountInfo {
 
     @Id
     private String id;
-    @Field(type=FieldType.text)
+    @Field(type=FieldType.String)
     private String accountName;
-    @Field(type=FieldType.text)
+    @Field(type=FieldType.String)
     private String nickName;
 
 

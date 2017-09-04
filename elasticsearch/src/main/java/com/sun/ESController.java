@@ -11,23 +11,16 @@ public class ESController {
     @Autowired
     private ElasticAccountInfoRepository repository;
 
-
-    @PostMapping("/")
-    public AccountInfo testSaveArticleIndex() {
-        AccountInfo accountInfo = new AccountInfo();
+    @PostMapping("")
+    public AccountInfo save(@RequestBody AccountInfo accountInfo) {
         AccountInfo save = repository.save(accountInfo);
         return save;
     }
 
     @GetMapping("/{id}")
-    public String queryAccountInfo(@PathVariable  String id, ModelMap modelMap){
-
-//        repository.findById()
-//        AccountInfo accountInfo = repository.findById(id);
-//        modelMap.addAttribute("esAccountInfo",accountInfo);
-//        modelMap.addAttribute("test_elastic","Test the elasticsearch");
-
-        return "accountInfo";
+    public AccountInfo queryById(@PathVariable  String id){
+        AccountInfo accountInfo = repository.findOne(id);
+        return accountInfo;
     }
 
     @RequestMapping("/esAccountInfoName")
