@@ -1,5 +1,5 @@
 server:
-  port: 3004
+  port: 10250
 spring:
   application:
     name: eureka-consumer-sleuth-stream
@@ -8,5 +8,6 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:1000/eureka/
-
+      defaultZone: http://localhost:10000/eureka/
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+spring.sleuth.sampler.percentage: 1

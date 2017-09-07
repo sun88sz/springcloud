@@ -23,6 +23,7 @@
         <module>eureka_hystrix_dashboard</module>
         <module>eureka_hystrix_turbine_stream</module>
         <module>elasticsearch</module>
+        <module>zipkin_server_stream_elasticsearch</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -73,7 +74,7 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>Dalston.RELEASE</version>
-                <!--<version>Edgware.M1</version>-->
+                <!--<version>Finchley.M1</version>-->
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

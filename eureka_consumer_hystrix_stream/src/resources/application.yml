@@ -1,5 +1,5 @@
 server:
-  port: 13006
+  port: 10260
 spring:
   application:
     name: enreka-consumer-feign-hystrix-stream
@@ -19,3 +19,5 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 10000
+debug: true
+hystrix.stream.dashboard.intervalInMilliseconds: 2000

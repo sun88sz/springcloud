@@ -1,5 +1,5 @@
 server:
-  port: 2001
+  port: 10110
 spring:
   application:
     name: eureka-client-sleuth-stream
@@ -8,7 +8,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:1000/eureka/
+      defaultZone: http://localhost:10000/eureka/
   instance:
     lease-expiration-duration-in-seconds: 30
     lease-renewal-interval-in-seconds: 10
+spring.sleuth.sampler.percentage: 1

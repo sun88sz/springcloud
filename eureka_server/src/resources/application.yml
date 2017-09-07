@@ -6,9 +6,11 @@ server:
 eureka:
   instance:
     hostname: localhost
+#    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
   server:
+    # 保护机制，不可用实例正确剔除
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 5000

@@ -1,7 +1,7 @@
 server:
-  port: 7002
+  port: 11010
 management:
-  port: 7003
+  port: 11011
 spring:
   application:
     name: hystrix-turbine

@@ -5,6 +5,13 @@ spring:
     name: zipkin-server-stream
   kafka:
     bootstrap-servers: localhost:9092
+debug: true
+zipkin.storage.type: elasticsearch
+zipkin.storage.elasticsearch.hosts: localhost:9300
+zipkin.storage.elasticsearch.cluster: es
+zipkin.storage.elasticsearch.index: zipkinstore
+zipkin.storage.elasticsearch.index-shards: 5
+zipkin.storage.elasticsearch.index-replicas: 2
 #elasticsearch config
 #zipkin:
 #  storage:

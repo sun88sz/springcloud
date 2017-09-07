@@ -1,5 +1,5 @@
 server:
-  port: 13005
+  port: 10220
 spring:
   application:
     name: enreka-consumer-feign-hystrix

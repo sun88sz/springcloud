@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class ApplicationConsumerSleuthStream {
+public class ConsumerSleuthStream {
 
     @Bean
     public RestTemplate restTemplate(){
@@ -16,8 +16,8 @@ public class ApplicationConsumerSleuthStream {
     }
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ApplicationConsumerSleuthStream.class).web(true).run(args);
+        new SpringApplicationBuilder(ConsumerSleuthStream.class).web(true).run(args);
 
-        System.out.println("ApplicationConsumerSleuthStream Completed");
+        System.out.println("ConsumerSleuthStream Completed");
     }
 }

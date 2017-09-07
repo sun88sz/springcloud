@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ApplicationClientSleuthStream {
+public class ClientSleuthStream {
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ApplicationClientSleuthStream.class).web(true).run(args);
+        new SpringApplicationBuilder(ClientSleuthStream.class).web(true).run(args);
 
-        System.out.println("ApplicationClientSleuthStream completed");
+        System.out.println("ClientSleuthStream completed");
     }
 }
