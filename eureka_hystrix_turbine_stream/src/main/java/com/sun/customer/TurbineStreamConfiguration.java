@@ -99,26 +99,16 @@ public class TurbineStreamConfiguration implements SmartLifecycle {
             this.turbinePort = SocketUtils.findAvailableTcpPort(40000);
         }
 
+        publishedStreams.subscribe(data -> {
+            String json = doingJson(data);
+            System.out.println(json);
+        });
+
+
 //		customerDoing(publishedStreams);
 //        return null;
-        return createServer(output);
+        return createServer(publishedStreams);
 
-    }
-
-    public void customerDoing(Observable<Map<String, Object>> output) {
-        output.doOnUnsubscribe(
-                () -> log.info("Unsubscribing RxNetty server connection"))
-                .flatMap(data -> xx(data));
-    }
-
-    public Observable<Void> xx(Map<String, Object> data) {
-        JsonUtility.mapToJson(data);
-        return flush();
-    }
-
-    @SuppressWarnings("unchecked")
-    public Observable<Void> flush() {
-        return Observable.create(subscriber -> subscriber.onCompleted());
     }
 
     /**
@@ -138,6 +128,23 @@ public class TurbineStreamConfiguration implements SmartLifecycle {
                 }, sseServerConfigurator());
         return httpServer;
     }
+
+    public void customerDoing(Observable<Map<String, Object>> output) {
+        output.doOnUnsubscribe(
+                () -> log.info("Unsubscribing RxNetty server connection"))
+                .flatMap(data -> xx(data));
+    }
+
+    public Observable<Void> xx(Map<String, Object> data) {
+        JsonUtility.mapToJson(data);
+        return flush();
+    }
+
+    @SuppressWarnings("unchecked")
+    public Observable<Void> flush() {
+        return Observable.create(subscriber -> subscriber.onCompleted());
+    }
+
 
     private String doingJson(Map<String, Object> data) {
         String json = JsonUtility.mapToJson(data);
@@ -167,14 +174,14 @@ public class TurbineStreamConfiguration implements SmartLifecycle {
         }
     }
 
-    public void visitTurbieStream(){
-        URI  realUrl = null;
+    public void visitTurbieStream() {
+        URI realUrl = null;
         try {
-            realUrl = new URI("http://localhost:"+this.turbinePort+"/turbine.stream");
+            realUrl = new URI("http://localhost:" + this.turbinePort + "/turbine.stream");
             SimpleClientHttpRequestFactory schr = new SimpleClientHttpRequestFactory();
             ClientHttpRequest request = schr.createRequest(realUrl, HttpMethod.GET);
             request.execute();
-        }  catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         } catch (URISyntaxException e) {
             e.printStackTrace();

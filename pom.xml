@@ -6,24 +6,25 @@
     <artifactId>springcloud</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>elasticsearch</module>
         <module>eureka_server</module>
         <module>eureka_client</module>
-        <module>eureka_consumer</module>
-        <module>eureka_consumer_feign_hystrix</module>
-        <module>eureka_consumer_feign</module>
-        <module>zipkin_server</module>
-        <module>eureka_consumer_hystrix_stream</module>
-        <module>eureka_stream_kafka_consumer</module>
-        <module>eureka_stream_kafka_producer</module>
-        <module>eureka_consumer_ribbon</module>
-        <module>zipkin_server_stream</module>
-        <module>eureka_consumer_sleuth_stream</module>
         <module>eureka_client_sleuth_stream</module>
+        <module>eureka_consumer</module>
+        <module>eureka_consumer_feign</module>
+        <module>eureka_consumer_feign_hystrix</module>
+        <module>eureka_consumer_hystrix_stream</module>
+        <module>eureka_consumer_ribbon</module>
+        <module>eureka_consumer_sleuth_stream</module>
         <module>eureka_hystrix_turbine</module>
         <module>eureka_hystrix_dashboard</module>
         <module>eureka_hystrix_turbine_stream</module>
-        <module>elasticsearch</module>
+        <module>eureka_stream_kafka_producer</module>
+        <module>eureka_stream_kafka_consumer</module>
+        <module>zipkin_server</module>
+        <module>zipkin_server_stream</module>
         <module>zipkin_server_stream_elasticsearch</module>
+        <module>config_server</module>
     </modules>
     <packaging>pom</packaging>
 

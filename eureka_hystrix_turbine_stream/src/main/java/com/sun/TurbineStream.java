@@ -15,15 +15,6 @@ import java.util.Map;
 @SpringBootApplication
 public class TurbineStream {
 
-    public PublishSubject<Map<String, Object>> hystrixSubject() {
-        return PublishSubject.create();
-    }
-
-    public String getA() {
-        new ObservableTurbineTest(hystrixSubject()).a();
-        return "1";
-    }
-
     public static void main(String[] args) {
         new SpringApplicationBuilder(TurbineStream.class).run(args);
 

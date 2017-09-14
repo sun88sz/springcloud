@@ -1,0 +1,14 @@
+server:
+  port: 7100
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://10.255.229.121/ctsp/test-ctsp.git
+          search-paths: /config1,/config2 # gitlab仓库地址下的相对地址，可以配置多个，用,分割。
+          username: sunchenjie
+          password: 12345678
+          #default-label: develop #指定gitlab仓库的分支
