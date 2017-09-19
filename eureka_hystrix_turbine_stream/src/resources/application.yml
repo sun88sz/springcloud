@@ -10,7 +10,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10000/eureka/
+      defaultZone: http://localhost:8761/eureka/
 turbine:
   app-config: enreka-consumer-feign-hystrix-stream
   cluster-name-expression: new String("default")

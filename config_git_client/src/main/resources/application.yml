@@ -1,0 +1,10 @@
+server:
+  port: 7200
+spring:
+  application:
+    name: git_client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.255.229.123:8761/eureka/,http://10.255.229.124:8761/eureka/
+

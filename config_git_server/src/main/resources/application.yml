@@ -12,3 +12,7 @@ spring:
           username: 97058234
           password: zaq1234
           #default-label: develop #指定gitlab仓库的分支
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.255.239.123:8761/eureka/,http://10.255.239.124:8761/eureka/

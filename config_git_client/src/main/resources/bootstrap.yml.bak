@@ -1,0 +1,10 @@
+server.
+  port: 7200
+spring:
+  application:
+    name: git_client
+  cloud:
+    config:
+      profile: dev #开发
+      label: dev #分支
+      uri: http://localhost:7100

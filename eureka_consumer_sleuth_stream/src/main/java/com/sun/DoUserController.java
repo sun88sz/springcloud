@@ -27,7 +27,7 @@ public class DoUserController {
     @GetMapping("/consumer")
     public String consumer() {
         ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-client-sleuth-stream");
-        String url = "http://" + "localhost" + ":" + serviceInstance.getPort() + "/user/if1";
+        String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/user/if1";
 
         log.info("调用 sleuth_stream consumer -> " + url);
         return restTemplate.getForObject(url, String.class);

@@ -6,7 +6,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://10.255.229.123:10000/eureka/
+      defaultZone: http://10.255.229.123:8761/eureka/
 spring.sleuth.sampler.percentage: 1
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
 spring.cloud.stream.kafka.binder.brokers: 10.255.229.123:9092
