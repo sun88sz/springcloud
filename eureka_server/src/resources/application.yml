@@ -5,12 +5,15 @@ server:
   port: 10000
 eureka:
   instance:
-    hostname: localhost
-#    prefer-ip-address: true
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+    #hostname: localhost
+    prefer-ip-address: true #使用ip注册，非hostname
+ # client:
+    #register-with-eureka: false
+   # fetch-registry: false
   server:
     # 保护机制，不可用实例正确剔除
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 5000
+  client:
+    service-url:
+      defaultZone: http://10.255.229.123:10000/

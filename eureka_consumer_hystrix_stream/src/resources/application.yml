@@ -3,12 +3,12 @@ server:
 spring:
   application:
     name: enreka-consumer-feign-hystrix-stream
-  kafka:
-    bootstrap-servers: localhost:9092
+#  kafka:
+#    bootstrap-servers: 10.255.229.123:9092
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10000/eureka/
+      defaultZone: http://10.255.229.123:10000/eureka/
 feign:
   hystrix:
     enabled: true
@@ -21,3 +21,6 @@ hystrix:
             timeoutInMilliseconds: 10000
 debug: true
 hystrix.stream.dashboard.intervalInMilliseconds: 2000
+
+spring.cloud.stream.kafka.binder.brokers : 10.255.229.123:9092
+spring.cloud.stream.kafka.binder.zk-nodes : 10.255.229.123:2181

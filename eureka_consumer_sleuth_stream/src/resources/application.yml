@@ -3,11 +3,14 @@ server:
 spring:
   application:
     name: eureka-consumer-sleuth-stream
-  kafka:
-    bootstrap-servers: localhost:9092
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10000/eureka/
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+      defaultZone: http://10.255.229.123:10000/eureka/
 spring.sleuth.sampler.percentage: 1
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+spring.cloud.stream.kafka.binder.brokers: 10.255.229.123:9092
+spring.cloud.stream.kafka.binder.zk-nodes: 10.255.229.123:2181
+
+#  kafka:
+#    bootstrap-servers: localhost:9092

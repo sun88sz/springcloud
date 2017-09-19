@@ -1,0 +1,14 @@
+server:
+  port: 7100
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sun88sz/springcloud.git
+          search-paths: /config_git_server/config,/config2 # gitlab仓库地址下的相对地址，可以配置多个，用,分割。
+          username: 97058234
+          password: zaq1234
+          #default-label: develop #指定gitlab仓库的分支
